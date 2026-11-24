@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "@fontsource-variable/jetbrains-mono";
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/MonaSans.woff2") format("woff2");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-ink-950: #08090b;
+  --color-ink-900: #0d0f12;
+  --color-ink-800: #15181d;
+  --color-ink-700: #22262d;
+  --color-bone: #eceae3;
+  --color-mute: #8b9099;
+  --color-signal: #3de8ff;
+  --color-ember: #ffb547;
+
+  --font-display: "Mona Sans", Arial, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+
+  --ease-expo: cubic-bezier(0.65, 0.05, 0, 1);
+
+  --radius-button: 10px;
+  --radius-card: 56px;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ink-950);
+    color: var(--color-bone);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-ink-950);
+    color: var(--color-bone);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-signal);
+    color: var(--color-ink-950);
+  }
+}
